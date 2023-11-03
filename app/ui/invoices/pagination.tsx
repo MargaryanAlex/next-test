@@ -9,7 +9,7 @@ import {usePathname, useSearchParams} from 'next/navigation';
 
 export default function Pagination({totalPages}: { totalPages: number }) {
     // NOTE: comment in this code when you get to this point in the course
-
+    let position: 'first' | 'last' | 'single' | 'middle';
     const pathname = usePathname();
     const searchParams = useSearchParams();
     const currentPage = Number(searchParams.get('page')) || 1;
@@ -33,7 +33,7 @@ export default function Pagination({totalPages}: { totalPages: number }) {
 
                 <div className="flex -space-x-px">
                     {allPages.map((page, index) => {
-                        let position: 'first' | 'last' | 'single' | 'middle';
+
 
                         if (index === 0) position = 'first';
                         if (index === allPages.length - 1) position = 'last';
