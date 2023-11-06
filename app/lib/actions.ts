@@ -65,7 +65,7 @@ export async function createInvoice(prevState: State, formData: FormData) {
 
 }
 
-const UpdateInvoice = InvoiceSchema.omit({id: true, date: true});
+const UpdateInvoice = InvoiceSchema.omit({ date: true});
 
 // ...
 
