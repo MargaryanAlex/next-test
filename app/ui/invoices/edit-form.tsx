@@ -17,7 +17,7 @@ export default function EditInvoiceForm({
 }) {
     const updateInvoiceWithId = updateInvoice.bind(null, invoice.id);
     const initialState = {message: null, errors: {}};
-
+// @ts-ignor
     const [state, dispatch] = useFormState(updateInvoiceWithId, initialState);
     return (
         <form action={dispatch}>
